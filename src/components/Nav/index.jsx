@@ -6,25 +6,29 @@ import { useState } from "react";
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <NavBar>
       <A href="https://www.unifenas.br/" target="_blank">
         <Img src={logoUnifenas} alt="Logo Unifenas" />
       </A>
-      <MenuIcon onClick={() => setMenuOpen(!menuOpen)}>☰</MenuIcon>
+      <MenuIcon onClick={toggleMenu}>☰</MenuIcon>
       <NavList menuOpen={menuOpen}>
         <NavItem>
-          <Link to="home" smooth={true} duration={500}>
+          <Link to="home" smooth={true} duration={500} offset={-100}>
             Home
           </Link>
         </NavItem>
         <NavItem>
-          <Link to="sobre" smooth={true} duration={500}>
+          <Link to="sobre" smooth={true} duration={500} offset={-100}>
             Sobre
           </Link>
         </NavItem>
         <NavItem>
-          <Link to="contato" smooth={true} duration={1000}>
+          <Link to="contato" smooth={true} duration={500} offset={-100}>
             Contato
           </Link>
         </NavItem>
@@ -48,12 +52,11 @@ const NavBar = styled.nav`
 
 const MenuIcon = styled.div`
   font-size: 2rem;
-  color: #ffffff;
-
+  color: #fff;
   cursor: pointer;
 
-  @media (max-width: 768px) {
-    display: block;
+  @media (min-width: 601px) {
+    display: none;
   }
 `;
 
@@ -63,7 +66,7 @@ const NavList = styled.ul`
   list-style: none;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     position: absolute;
     top: 70px;
     right: 0;
@@ -73,17 +76,21 @@ const NavList = styled.ul`
     padding: 1rem;
     display: ${({ menuOpen }) => (menuOpen ? "flex" : "none")};
   }
+
+  @media (min-width: 601px) {
+    display: flex;
+  }
 `;
 
 const NavItem = styled.li`
-  color: #ffd700; /* Dourado vibrante */
+  color: #7bff00;
   font-size: 1.3rem;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
   position: relative;
 
   &:hover {
-    color: #ffa500; /* Laranja forte */
+    color: #69c026;
   }
 
   &:after {
@@ -91,7 +98,7 @@ const NavItem = styled.li`
     display: block;
     height: 3px;
     width: 0;
-    background: #ffa500;
+    background: #69c026;
     transition: width 0.3s ease-in-out;
     position: absolute;
     bottom: -5px;

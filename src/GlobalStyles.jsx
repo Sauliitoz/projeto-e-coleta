@@ -7,8 +7,10 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
     body{
-        font-family: 'Roboto', sans-serif;
-        min-height: 100vh;
+      font-family: 'Roboto', sans-serif;
+      overflow-x: hidden;
+      padding: 100px 20px;
+      
     }
     
     

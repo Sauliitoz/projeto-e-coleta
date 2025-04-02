@@ -1,17 +1,18 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
-import Container from "./components/container";
+import Home from "./components/Home";
+import Sobre from "./components/Sobre";
+import Contato from "./components/Contato";
 import Nav from "./components/nav";
-
-
 
 export default function App() {
   return (
     <>
-    <GlobalStyles />
-    <Nav />
-    <Container/>
+      <GlobalStyles />
+      <Nav />
+      <Home />
+      <Sobre />
+      <Contato />
     </>
   );
 }
-

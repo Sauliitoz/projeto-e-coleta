@@ -5,7 +5,7 @@ import Logo from "../../assets/Logo1.png";
 export default function Home() {
   return (
     <>
-      <Section id="home">
+      <Section id="home" >
         <H1>Impactos Ambientais do Lixo Eletrônico e Legislação Vigente</H1>
         <LogoRecycle src={Logo} alt="Logo de reciclagem" />
 
@@ -111,7 +111,7 @@ export default function Home() {
         </Ul>
 
         <P>
-          O <span> Artigo 33 da Lei 12.305/2010 </span> estabelece que
+          O Artigo 33 da Lei 12.305/2010  estabelece que
           fabricantes e comerciantes são obrigados a estruturar sistemas de
           logística reversa, garantindo que os produtos eletroeletrônicos
           descartados sejam reaproveitados ou reciclados corretamente.
@@ -122,29 +122,24 @@ export default function Home() {
           comum.
         </P>
 
-        <H2>Regulamentações estaduais</H2>
+        <H2>Regulamentação estadual</H2>
         <P>
           Além da legislação federal, alguns estados possuem leis específicas
           para o descarte de lixo eletrônico.
         </P>
-
+        <P>Em Minas Gerais:</P>
         <Ul>
           <Li>
-            São Paulo: Lei 13.576/2009 obriga fabricantes a fornecer informações
-            sobre a destinação correta dos produtos e proíbe o descarte de
-            eletrônicos no lixo comum.
-          </Li>
-          <Li>
-            Minas Gerais: Lei 18.031/2009 e Lei 13.766/2000 estabelecem a
+           A Lei 18.031/2009 e a Lei 13.766/2000 estabelecem a
             política estadual de resíduos sólidos e incentivam a coleta
             seletiva.
           </Li>
         </Ul>
-        <P>
+        <H5>
           Além disso, a Resolução nº 452/2012 do CONAMA exige que empresas
           apresentem planos de gerenciamento para minimizar os impactos
           ambientais dos eletroeletrônicos.
-        </P>
+        </H5>
 
         <H2>Exemplo de aplicação da legislação</H2>
         <P>
@@ -214,7 +209,7 @@ const P = styled.p`
   line-height: 1.5;
   text-align: justify;
   color: #2a4d17;
-  margin-bottom: 20px;
+  margin: 15px 0;
 `;
 const Ul = styled.ul`
   list-style: disc;
@@ -243,31 +238,28 @@ const Ol = styled.ol`
   list-style-position: inside;
 `;
 const H1 = styled.h1`
-  font-size: clamp(2rem, 5vw, 3rem); /* Adaptação para mobile */
+  font-size: clamp(2rem, 5vw, 3rem);
   color: #111;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
-  margin-bottom: 20px;
+  margin: 30px 0 30px 0;
+  word-wrap: break-word;
 `;
 const H2 = styled.h2`
-  font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
   color: #222;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   text-align: center;
   margin-bottom: 18px;
+  max-width: 100%;
+  width: 100%;
+  margin: 30px 0 30px 0;
 `;
-const H3 = styled.h3`
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  color: #333;
-  letter-spacing: 1px;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  margin-bottom: 16px;
-`;
+
 const H4 = styled.h4`
   font-size: clamp(1.2rem, 3.5vw, 1.8rem);
   color: #444;
@@ -275,29 +267,43 @@ const H4 = styled.h4`
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   text-align: center;
   margin-bottom: 14px;
+  word-wrap: break-word;
+  margin: 30px 0 30px 0;
+`;
+const H5 = styled.h5`
+font-size: clamp(1rem, 3.5vw, 1.8rem);
+  color: #444;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 14px;
+  word-wrap: break-word;
+  margin: 30px 0 30px 0;
 `;
 
 const Section = styled.section`
-  margin: 100px auto;
+  margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
   background-color: #69c026;
   box-shadow: 20px 30px 30px rgba(0, 0, 0, 0.1);
-  max-width: 1000px;
-  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const LogoRecycle = styled.img`
   width: 80%;
   max-width: 300px;
   display: block;
-  margin: 20px auto;
 `;
 
 const Img = styled.img`
   width: 100%;
   max-width: 800px;
+  min-width: 250px;
   height: auto;
   display: block;
-  margin: 20px auto;
 `;
