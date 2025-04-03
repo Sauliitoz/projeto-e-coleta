@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Logo from "../../assets/Logo1.jpg";
+import Info from "../../assets/info20.jpg";
 
 export default function Home() {
   return (
@@ -37,7 +38,7 @@ export default function Home() {
         <H2>Impactos ambientais e à saúde</H2>
 
         <Img
-          src="http://nexjor-sites.upf.br/boaspraticas/wp-content/uploads/2019/10/info20.jpg"
+          src={Info}
           alt="Explicação do ciclo dos eletrônicos após a 'Morte' do item que vai para o lixão: Materiais criam o chorume, que corrói os eletrônicos liberando ions de metais, chegando ao solo e depois a agua, causando um efeito em cadeia no ecossistema tanto para os a fauna e flora, quanto para os humanos, causando irritações na pele e problemas neurológicos com o acúmulo "
           width="800px"
         />
