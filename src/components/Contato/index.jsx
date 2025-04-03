@@ -4,108 +4,56 @@ import styled from "styled-components";
 export default function Contato() {
   return (
     <Section>
-      <H3 id="contato">Projeto Criado por:</H3>
-      <Div>
-        <Ul>
-          <Li>
-            <A href="#" target="_blank">
-              <Img
-                src="#"
-                alt="Foto do Perfil de Alex Barbosa Proque "
-              />
-              Alex Barbosa Proque
-            </A>
-          </Li>
-          <Li>
-            <A href="#" target="_blank">
-              <Img
-                src="#"
-                alt="Foto do Perfil de Felipe Jhonatan Martins "
-              />
-              Felipe Jhonatan Martins
-            </A>
-          </Li>
-          <Li>
-            <A href="#" target="_blank">
-              <Img
-                src="#"
-                alt="Foto do Perfil de Henrique Rodrigues Lelis "
-              />
-              Henrique Rodrigues Lelis
-            </A>
-          </Li>
-          <Li>
-            <A href="#" target="_blank">
-              <Img
-                src="#"
-                alt="Foto do Perfil de João Victor Emerenciano Lins "
-              />
-              João Victor Emerenciano Lins
-            </A>
-          </Li>
-          <Li>
-            <A href="https://www.linkedin.com/in/sauloats" target="_blank">
-              <Img
-                src="https://media.licdn.com/dms/image/v2/D4D35AQFZuXQXE8ttww/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1727995558085?e=1744070400&v=beta&t=SH78mPZ89E3tHI1wp7R3XZ6k2OUwHy0n0_wqBuWkHcM"
-                alt="Foto do Perfil de Saulo Teixeira "
-              />
-              Saulo Teixeira
-            </A>
-          </Li>
-        </Ul>
-      </Div>
+      <H3 id="contato">Criado por:</H3>
+
+      <H2>Alex Barbosa Proque</H2>
+
+      <H2>Felipe Jhonatan Martins</H2>
+
+      <H2>Henrique Rodrigues Lelis</H2>
+
+      <H2>João Victor Emerenciano Lins</H2>
+
+      <H2>Saulo Teixeira</H2>
     </Section>
   );
 }
 
 const Section = styled.section`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-`;
-const H3 = styled.h1`
-  font-size: 1.2rem;
-  color: #000;
-`;
-
-const Div = styled.div`
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #69c026;
+  box-shadow: 20px 30px 30px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
-const Ul = styled.ul`
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  flex-wrap: wrap; /* Adiciona capacidade de quebra de linha */
-
-  @media (max-width: 600px) {
-    
-    justify-content: center; 
-    gap: 20px; 
-  }
+const H3 = styled.h3`
+  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin-bottom: 18px;
+  max-width: 100%;
+  width: 100%;
+  margin: 30px 0;
 `;
 
-const Li = styled.li`
-  list-style: none;
-`;
-
-const A = styled.a`
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const Img = styled.img`
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin-bottom: 5px;
+const H2 = styled.h2`
+  font-size: clamp(0.8rem, 4.5vw, 1.5rem);
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin-bottom: 18px;
+  max-width: 100%;
+  width: 100%;
+  margin: 30px 0;
 `;

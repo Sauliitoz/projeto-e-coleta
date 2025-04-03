@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../../assets/Logo1.png";
+import Logo from "../../assets/Logo1.jpg";
 
 export default function Home() {
   return (

@@ -29,7 +29,7 @@ export default function Nav() {
         </NavItem>
         <NavItem>
           <Link to="contato" smooth={true} duration={500} offset={-100}>
-            Contato
+            Integrantes
           </Link>
         </NavItem>
       </NavList>
